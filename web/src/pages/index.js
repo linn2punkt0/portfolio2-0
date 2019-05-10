@@ -8,14 +8,18 @@ import {
 import SEO from "../components/seo";
 import Layout from "../containers/layout";
 
-// export const query = graphql`
-//   query IndexPageQuery {
-
-//   }
-// `;
+export const query = graphql`
+  query IndexPageQuery {
+    sanityHome {
+      name
+      tagline
+    }
+  }
+`;
 
 const IndexPage = props => {
   const { data, errors } = props;
+  console.log(data);
 
   // const site = (data || {}).site
   // const projectNodes = (data || {}).projects
