@@ -7,8 +7,8 @@ const StyledBurger = styled.nav`
   background-color: var(--main-accent-color);
   border-radius: 50px;
   position: fixed;
-  top: 2vh;
-  right: 2vh;
+  top: 5vh;
+  right: 5vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,13 +24,7 @@ const StyledBurger = styled.nav`
     width: 60px;
     height: 45px;
     position: relative;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
     transform: rotate(0deg) scale(0.5);
-    -webkit-transition: 0.5s ease-in-out;
-    -moz-transition: 0.5s ease-in-out;
-    -o-transition: 0.5s ease-in-out;
     transition: 0.5s ease-in-out;
     cursor: pointer;
     background: none;
@@ -56,13 +50,7 @@ const StyledBurger = styled.nav`
     border-radius: 9px;
     opacity: 1;
     left: 0;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
     transform: rotate(0deg);
-    -webkit-transition: 0.25s ease-in-out;
-    -moz-transition: 0.25s ease-in-out;
-    -o-transition: 0.25s ease-in-out;
     transition: 0.25s ease-in-out;
   }
   button span:nth-child(1) {

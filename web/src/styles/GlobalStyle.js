@@ -18,6 +18,11 @@ const GlobalStyle = createGlobalStyle`
   body{
     background-color: var(--main-bg-color);
     color: var(--main-font-color);
+    font-family: var(--main-font);
+
+    display: block;
+    margin: 0;
+    padding: 0;
   }
 `;
 
