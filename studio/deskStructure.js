@@ -1,8 +1,11 @@
-import S from '@sanity/desk-tool/structure-builder'
-import MdSettings from 'react-icons/lib/md/settings'
+import S from '@sanity/desk-tool/structure-builder';
+import MdSettings from 'react-icons/lib/md/settings';
+import MdFace from 'react-icons/lib/md/face';
+import MdWork from 'react-icons/lib/md/work';
+import MdPublic from 'react-icons/lib/md/public';
 
 const hiddenDocTypes = listItem =>
-  !['category', 'person', 'project', 'siteSettings'].includes(listItem.getId())
+  !['project', 'siteSettings', 'about', 'cv'].includes(listItem.getId());
 
 export default () =>
   S.list()
@@ -18,19 +21,38 @@ export default () =>
         )
         .icon(MdSettings),
       S.listItem()
+        .title('Home')
+        .child(
+          S.editor()
+            .id('home')
+            .schemaType('home')
+            .documentId('home')
+        )
+        .icon(MdPublic),
+      S.listItem()
+        .title('About')
+        .child(
+          S.editor()
+            .id('about')
+            .schemaType('about')
+            .documentId('about')
+        )
+        .icon(MdFace),
+      S.listItem()
+        .title('CV')
+        .child(
+          S.editor()
+            .id('cv')
+            .schemaType('cv')
+            .documentId('cv')
+        )
+        .icon(MdWork),
+      S.listItem()
         .title('Projects')
         .schemaType('project')
-        .child(S.documentTypeList('project').title('Projects')),
-      S.listItem()
-        .title('People')
-        .schemaType('person')
-        .child(S.documentTypeList('person').title('People')),
-      S.listItem()
-        .title('Categories')
-        .schemaType('category')
-        .child(S.documentTypeList('category').title('Categories')),
+        .child(S.documentTypeList('project').title('Projects'))
       // This returns an array of all the document types
       // defined in schema.js. We filter out those that we have
       // defined the structure above
-      ...S.documentTypeListItems().filter(hiddenDocTypes)
-    ])
+      // ...S.documentTypeListItems().filter(hiddenDocTypes)
+    ]);

@@ -1,4 +1,4 @@
-import {format} from 'date-fns'
+import { format } from 'date-fns';
 
 export default {
   name: 'project',
@@ -21,70 +21,53 @@ export default {
       }
     },
     {
-      name: 'publishedAt',
-      title: 'Published at',
-      description: 'You can use this field to schedule projects where you show them',
+      name: 'date',
+      title: 'Date',
+      description: 'When was the project completed?',
       type: 'datetime'
     },
     {
-      name: 'excerpt',
-      title: 'Excerpt',
-      type: 'simplePortableText'
+      name: 'overview',
+      title: 'Overview',
+      type: 'text'
     },
     {
-      name: 'members',
-      title: 'Members',
-      type: 'array',
-      of: [{type: 'projectMember'}]
+      name: 'description',
+      title: 'Description',
+      type: 'text'
     },
     {
-      name: 'startedAt',
-      title: 'Started at',
-      type: 'datetime'
-    },
-    {
-      name: 'endedAt',
-      title: 'Ended at',
-      type: 'datetime'
+      name: 'collaborators',
+      title: 'Collaborators',
+      type: 'text'
     },
     {
       name: 'mainImage',
       title: 'Main image',
-      type: 'figure'
+      type: 'image'
     },
     {
-      name: 'categories',
-      title: 'Categories',
-      type: 'array',
-      of: [{type: 'reference', to: {type: 'category'}}]
+      name: 'secondImage',
+      title: 'Second image',
+      type: 'image'
     },
     {
-      name: 'body',
-      title: 'Body',
-      type: 'projectPortableText'
-    },
-    {
-      name: 'relatedProjects',
-      title: 'Related projects',
-      type: 'array',
-      of: [{type: 'reference', to: {type: 'project'}}]
+      name: 'thirdImage',
+      title: 'Third image',
+      type: 'image'
     }
   ],
   preview: {
     select: {
       title: 'title',
-      publishedAt: 'publishedAt',
       slug: 'slug',
       media: 'mainImage'
     },
-    prepare ({title = 'No title', publishedAt, slug, media}) {
-      const dateSegment = format(publishedAt, 'YYYY/MM')
-      const path = `/${dateSegment}/${slug.current}/`
+    prepare({ title = 'No title', slug, media }) {
       return {
         title,
-        media,
-        subtitle: publishedAt ? path : 'Missing publishing date'
-      }
+        media
+      };
     }
   }
-}
+};
