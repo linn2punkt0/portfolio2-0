@@ -26,7 +26,7 @@ export default {
       description: 'When was the project completed?',
       type: 'datetime',
       options: {
-        dateFormat: 'DD-MM-YY'
+        dateFormat: 'YYYY-MM-DD'
       }
     },
     {
