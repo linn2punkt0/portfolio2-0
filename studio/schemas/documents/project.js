@@ -27,6 +27,12 @@ export default {
       type: 'datetime'
     },
     {
+      name: 'featured',
+      title: 'Featured',
+      description: 'Feature this project on homepage?',
+      type: 'boolean'
+    },
+    {
       name: 'overview',
       title: 'Overview',
       type: 'text'
