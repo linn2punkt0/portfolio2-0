@@ -10,7 +10,8 @@ export default {
     },
     {
       name: 'tagline',
-      type: 'text',
+      type: 'array',
+      of: [{ type: 'block' }],
       title: 'Tagline'
     },
     {
