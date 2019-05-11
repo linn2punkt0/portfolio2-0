@@ -48,6 +48,16 @@ export default {
       type: 'text'
     },
     {
+      name: 'githubLink',
+      title: 'Github Link',
+      type: 'url'
+    },
+    {
+      name: 'liveLink',
+      title: 'Live Link',
+      type: 'url'
+    },
+    {
       name: 'mainImage',
       title: 'Main image',
       type: 'image'
