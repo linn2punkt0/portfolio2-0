@@ -10,7 +10,7 @@ export default {
     },
     {
       name: 'icon',
-      type: 'image',
+      type: 'text',
       title: 'Icon'
     }
   ]
