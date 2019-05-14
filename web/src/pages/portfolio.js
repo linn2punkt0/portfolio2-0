@@ -1,14 +1,90 @@
 import React from "react";
 import styled from "styled-components";
 import Layout from "../containers/layout";
+import { graphql } from "gatsby";
+import {
+  mapEdgesToNodes,
+  filterOutDocsWithoutSlugs,
+  filterOutDocsPublishedInTheFuture
+} from "../lib/helpers";
+import ProjectOverview from "../components/ProjectOverview";
 
-const Styledportfolio = styled.div``;
+export const query = graphql`
+  query PortfolioQuery {
+    projects: allSanityProject(sort: { fields: date, order: DESC }) {
+      edges {
+        node {
+          id
+          title
+          slug {
+            _key
+            _type
+            current
+          }
+          date
+          overview
+          description
+          collaborators
+          githubLink
+          liveLink
+          mainImage {
+            asset {
+              url
+            }
+          }
+          secondImage {
+            asset {
+              url
+            }
+          }
+          thirdImage {
+            asset {
+              url
+            }
+          }
+        }
+      }
+    }
+  }
+`;
+const Styledportfolio = styled.div`
+  font-family: var(--main-font);
+  color: var(--main-accent-color);
+
+  & > h1 {
+    color: var(--main-font-color);
+    font-family: var(--main-font);
+    font-size: 70px;
+    font-weight: 700;
+    margin: 3vw 0 3vw 5vw;
+    align-self: flex-start;
+  }
+  .projectContainer {
+    width: 90vw;
+    max-height: 90vh;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3vh;
+  }
+`;
 
 const portfolio = props => {
+  const { data, errors } = props;
+  const projects = (data || {}).projects ? mapEdgesToNodes(data.projects) : [];
+  console.log(projects);
+
   return (
-    <Styledportfolio>
-      <h1>Portfolio</h1>
-    </Styledportfolio>
+    <Layout>
+      <Styledportfolio>
+        <h1>Portfolio</h1>
+        <div className="projectContainer">
+          {projects.map(project => (
+            <ProjectOverview key={project.id} content={project} />
+          ))}
+        </div>
+      </Styledportfolio>
+    </Layout>
   );
 };
 
