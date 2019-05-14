@@ -9,9 +9,14 @@ export default {
       title: 'Title'
     },
     {
-      name: 'time',
+      name: 'start',
       type: 'date',
-      title: 'Time'
+      title: 'Start'
+    },
+    {
+      name: 'end',
+      type: 'date',
+      title: 'End'
     },
     {
       name: 'school',
