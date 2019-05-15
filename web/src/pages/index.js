@@ -94,7 +94,7 @@ const IndexPage = props => {
       <Styledindex>
         {/* <SEO title={site.title} description={site.description} keywords={site.keywords} /> */}
         <div>
-          <h2>{data.homepage.name}</h2>
+          <h2>{homepage.name}</h2>
           <h1>
             <LineBreakText text={homepage.tagline} />
           </h1>
