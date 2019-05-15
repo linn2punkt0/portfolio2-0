@@ -10,6 +10,9 @@ const StyledFeaturedProjects = styled.a`
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+  @media only screen and (max-width: 800px) {
+    min-width: 90vw;
+  }
 
   h5 {
     margin: 0.5vh 0;

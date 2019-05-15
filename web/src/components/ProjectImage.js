@@ -4,13 +4,16 @@ import styled from "styled-components";
 const StyledProjectImage = styled.div`
   position: relative;
   width: 100%;
-  margin: 5vh 0;
+  margin: 5vh 0 2vh 0;
   padding: 0;
   padding-top: 50%;
   background: url(${props => props.imageUrl || "grey"});
   background-size: cover;
   background-position: cover;
   background-color: var(--main-font-color);
+  @media only screen and (max-width: 800px) {
+    margin: 3vh 0 1vh 0;
+  }
 `;
 
 const HoverOverlay = styled.div`

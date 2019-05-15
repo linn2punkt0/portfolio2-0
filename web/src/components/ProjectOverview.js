@@ -11,10 +11,18 @@ const StyledProjectOverview = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  @media only screen and (max-width: 800px) {
+    min-width: 90vw;
+    max-height: none;
+  }
 
   & > h5 {
     margin: 1vw 0 0 0;
     font-size: 25px;
+    @media only screen and (max-width: 800px) {
+      font-size: 22px;
+      margin-top: 10px;
+    }
   }
   & > a {
     margin: 1vh 0;
@@ -26,6 +34,9 @@ const StyledProjectOverview = styled.div`
     font-size: 20px;
     font-weight: 300;
     margin: 0;
+    @media only screen and (max-width: 800px) {
+      font-size: 17px;
+    }
   }
   .completion-date {
     margin: 5px 0;
