@@ -42,7 +42,7 @@ const GlobalStyle = createGlobalStyle`
   }
   h2 {
     font-family: var(--main-accent-font);
-    font-size: 70px;
+    font-size: 90px;
     font-weight: 400;
     color: var(--main-accent-color);
     @media only screen and (max-width: 800px) {

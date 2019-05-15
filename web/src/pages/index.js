@@ -82,14 +82,6 @@ const Styledindex = styled.div`
       flex-direction: column;
     }
   }
-
-  @media only screen and (max-width: 800px) {
-    .main-div {
-      width: 90vw;
-      margin: 10vh auto;
-      position: relative;
-    }
-  }
 `;
 const IndexPage = props => {
   const { data, errors } = props;
