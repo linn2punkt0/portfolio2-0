@@ -52,12 +52,11 @@ const Styledportfolio = styled.div`
   color: var(--main-accent-color);
 
   & > h1 {
-    color: var(--main-font-color);
-    font-family: var(--main-font);
-    font-size: 70px;
-    font-weight: 700;
     margin: 3vw 0 3vw 5vw;
     align-self: flex-start;
+    @media only screen and (max-width: 800px) {
+      margin: 3vw 0 3vw 5vw;
+    }
   }
   .projectContainer {
     width: 90vw;
@@ -66,6 +65,9 @@ const Styledportfolio = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 3vh;
+    @media only screen and (max-width: 800px) {
+      grid-template-columns: 1fr;
+    }
   }
 `;
 

@@ -24,6 +24,31 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
   }
+  svg{
+    fill: var(--main-accent-color);
+    width: 70px;
+    @media only screen and (max-width: 800px) {
+      width: 50px;
+    }
+  }
+  h1 {
+    color: var(--main-font-color);
+    font-family: var(--main-font);
+    font-size: 70px;
+    font-weight: 700;
+    @media only screen and (max-width: 800px) {
+      font-size: 35px;
+    }
+  }
+  h2 {
+    font-family: var(--main-accent-font);
+    font-size: 70px;
+    font-weight: 400;
+    color: var(--main-accent-color);
+    @media only screen and (max-width: 800px) {
+      font-size: 60px;
+    }
+  }
 `;
 
 export default GlobalStyle;

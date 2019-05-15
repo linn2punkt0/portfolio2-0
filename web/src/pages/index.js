@@ -48,19 +48,11 @@ const Styledindex = styled.div`
     margin-bottom: 10vh;
   }
   h2 {
-    color: var(--main-accent-color);
-    font-family: var(--main-accent-font);
-    font-size: 90px;
-    font-weight: 400;
     padding: 10px 0;
     margin: 0;
   }
 
   h1 {
-    color: var(--main-font-color);
-    font-family: var(--main-font);
-    font-size: 70px;
-    font-weight: 700;
     margin: 10px 0;
   }
   h4 {
@@ -73,6 +65,10 @@ const Styledindex = styled.div`
     font-family: var(--main-font);
     color: var(--main-accent-color);
     font-size: 30px;
+    @media only screen and (max-width: 800px) {
+      max-height: none;
+      font-size: 25px;
+    }
   }
   .row {
     width: 100%;
@@ -82,6 +78,17 @@ const Styledindex = styled.div`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    @media only screen and (max-width: 800px) {
+      flex-direction: column;
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+    .main-div {
+      width: 90vw;
+      margin: 10vh auto;
+      position: relative;
+    }
   }
 `;
 const IndexPage = props => {
