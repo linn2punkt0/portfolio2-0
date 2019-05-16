@@ -67,6 +67,7 @@ const Styledportfolio = styled.div`
     grid-gap: 3vh;
     @media only screen and (max-width: 800px) {
       grid-template-columns: 1fr;
+      max-height: none;
     }
   }
 `;
