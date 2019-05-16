@@ -49,6 +49,26 @@ const GlobalStyle = createGlobalStyle`
       font-size: 60px;
     }
   }
+  h3{
+    @media only screen and (max-width: 800px) {
+      font-size: 24px;
+    }
+  }
+  h4{
+    @media only screen and (max-width: 800px) {
+      font-size: 20px;
+    }
+  }
+  h5{
+    @media only screen and (max-width: 800px) {
+      font-size: 20px;
+    }
+  }
+  p{
+    @media only screen and (max-width: 800px) {
+      font-size: 18px;
+    }
+  }
 `;
 
 export default GlobalStyle;
