@@ -10,10 +10,19 @@ const StyledContactBar = styled.div`
   justify-content: flex-start;
   align-items: center;
   text-align: center;
-
+  @media only screen and (max-width: 800px) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+  & > h1 {
+    font-size: 30px;
+  }
   img {
     width: 18vw;
     border-radius: 50%;
+    @media only screen and (max-width: 800px) {
+      width: 60vw;
+    }
   }
   svg {
     margin: 0.5vw;
@@ -21,6 +30,9 @@ const StyledContactBar = styled.div`
   & > h3 {
     margin: 1vw 0;
     overflow: auto;
+    @media only screen and (max-width: 800px) {
+      margin: 4vh 0;
+    }
   }
 `;
 

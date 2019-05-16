@@ -6,6 +6,10 @@ const StyledSkills = styled.div`
   grid-row: 2 / 3;
   background-color: var(--main-font-color);
   color: var(--main-bg-color);
+  @media only screen and (max-width: 800px) {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
   & > ul {
     display: flex;
     flex-direction: row;
