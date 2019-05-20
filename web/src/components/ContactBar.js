@@ -13,6 +13,14 @@ const StyledContactBar = styled.div`
   @media only screen and (max-width: 800px) {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
+    padding: 0;
+  }
+
+  & > h1,
+  h4,
+  h3 {
+    width: 90%;
+    margin: auto;
   }
   & > h1 {
     font-size: 30px;
@@ -32,6 +40,7 @@ const StyledContactBar = styled.div`
     overflow: auto;
     @media only screen and (max-width: 800px) {
       margin: 4vh 0;
+      font-size: 20px;
     }
   }
 `;
