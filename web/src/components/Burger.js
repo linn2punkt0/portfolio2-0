@@ -13,6 +13,10 @@ const StyledBurger = styled.nav`
   justify-content: center;
   align-items: center;
   z-index: 500;
+  @media only screen and (max-width: 800px) {
+    top: 2vh;
+    right: 2vh;
+  }
 
   button {
     z-index: 1000;

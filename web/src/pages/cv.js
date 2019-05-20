@@ -49,6 +49,8 @@ export const query = graphql`
 `;
 
 const Styledcv = styled.div`
+  width: 100vw;
+  overflow-x: hidden;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 200vh 40vh;
