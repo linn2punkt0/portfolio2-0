@@ -2,8 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import ProjectImage from "./ProjectImage";
 import moment from "moment";
+import { Link } from "gatsby";
 
-const StyledProjectOverview = styled.div`
+const StyledProjectOverview = styled(Link)`
   max-width: 30vw;
   min-width: 30%;
   text-decoration: none;
@@ -43,10 +44,10 @@ const StyledProjectOverview = styled.div`
     color: var(--main-accent-color);
   }
 `;
-
+// to={`/projects/${props.content.slug.current}`}
 const ProjectOverview = props => {
   return (
-    <StyledProjectOverview>
+    <StyledProjectOverview to={`/project/${props.content.slug.current}`}>
       <ProjectImage imageUrl={props.content.mainImage ? props.content.mainImage.asset.url : ""} />
       <h5>{props.content.title}</h5>
       <p className="completion-date">{moment(props.content.date).format("DD/M-YYYY")}</p>

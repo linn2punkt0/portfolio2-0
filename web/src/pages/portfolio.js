@@ -60,15 +60,19 @@ const Styledportfolio = styled.div`
   }
   .projectContainer {
     width: 90vw;
-    max-height: 90vh;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 3vh;
     @media only screen and (max-width: 800px) {
       grid-template-columns: 1fr;
-      max-height: none;
     }
+  }
+  a {
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--main-accent-color);
+    margin-top: 1vh;
   }
 `;
 
