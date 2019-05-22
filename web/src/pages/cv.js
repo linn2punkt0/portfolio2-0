@@ -53,7 +53,7 @@ const Styledcv = styled.div`
   overflow-x: hidden;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 200vh 40vh;
+  grid-template-rows: auto auto;
   @media only screen and (max-width: 800px) {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, auto);

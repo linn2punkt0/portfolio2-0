@@ -18,7 +18,7 @@ export const query = graphql`
   }
 `;
 const Styledabout = styled.div`
-  width: 80%;
+  width: 70%;
   height: 100%;
   margin: auto;
   display: flex;

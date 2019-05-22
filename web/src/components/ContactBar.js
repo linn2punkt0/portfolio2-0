@@ -20,7 +20,7 @@ const StyledContactBar = styled.div`
   h4,
   h3 {
     width: 90%;
-    margin: auto;
+    margin: 1vh auto;
   }
   & > h1 {
     font-size: 30px;
@@ -28,6 +28,7 @@ const StyledContactBar = styled.div`
   img {
     width: 18vw;
     border-radius: 50%;
+    margin: 1vh;
     @media only screen and (max-width: 800px) {
       width: 60vw;
     }

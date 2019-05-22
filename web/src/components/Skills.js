@@ -21,6 +21,7 @@ const StyledSkills = styled.div`
 
 const Skills = props => {
   const skills = props.cv;
+  console.log(skills);
   return (
     <StyledSkills>
       <ul>
