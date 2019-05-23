@@ -3,7 +3,7 @@ import styled from "styled-components";
 import ProjectImage from "./ProjectImage";
 import { Link } from "gatsby";
 
-const StyledFeaturedProjects = styled.a`
+const StyledFeaturedProjects = styled(Link)`
   max-width: 30vw;
   min-width: 30%;
   text-decoration: none;
@@ -17,12 +17,14 @@ const StyledFeaturedProjects = styled.a`
 
   h5 {
     margin: 0.5vh 0;
+    text-decoration: none;
+    color: var(--main-accent-color);
   }
 `;
 
 const FeaturedProjects = props => {
   return (
-    <StyledFeaturedProjects to={`/project/${props.content.slug.current}`}>
+    <StyledFeaturedProjects to={`/project/${props.slug}`}>
       <ProjectImage imageUrl={props.imageUrl} />
       <h5>{props.title}</h5>
     </StyledFeaturedProjects>

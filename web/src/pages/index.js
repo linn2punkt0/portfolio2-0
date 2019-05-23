@@ -23,6 +23,11 @@ export const query = graphql`
         node {
           id
           title
+          slug {
+            _key
+            _type
+            current
+          }
           mainImage {
             asset {
               url
@@ -107,6 +112,7 @@ const IndexPage = props => {
                 key={project.id}
                 title={project.title}
                 imageUrl={project.mainImage.asset.url}
+                slug={project.slug.current}
               />
             ))}
           </div>
