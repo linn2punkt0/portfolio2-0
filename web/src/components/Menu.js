@@ -20,7 +20,8 @@ const StyledMenu = styled.div`
   transform: ${props => (props.menuIsOpen ? "translateY(100vh)" : "translateY(0vh)")};
 
   div {
-    height: 100%;
+    height: 80%;
+    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
