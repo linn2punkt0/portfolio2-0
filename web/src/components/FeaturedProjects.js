@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import ProjectImage from "./ProjectImage";
+import { Link } from "gatsby";
 
 const StyledFeaturedProjects = styled.a`
   max-width: 30vw;
@@ -21,7 +22,7 @@ const StyledFeaturedProjects = styled.a`
 
 const FeaturedProjects = props => {
   return (
-    <StyledFeaturedProjects>
+    <StyledFeaturedProjects to={`/project/${props.content.slug.current}`}>
       <ProjectImage imageUrl={props.imageUrl} />
       <h5>{props.title}</h5>
     </StyledFeaturedProjects>
