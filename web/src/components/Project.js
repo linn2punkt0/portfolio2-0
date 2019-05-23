@@ -46,22 +46,20 @@ const StyledProject = styled.div`
 const Project = props => {
   console.log("project page, wihooo!");
   return (
-    <Layout>
-      <StyledProject>
-        <h1>{props.title}</h1>
-        {props.collaborators && (
-          <h3>
-            <LineBreakText text={props.collaborators} />
-          </h3>
-        )}
-        <p>{props.description}</p>
-        {props.mainImage && <img src={props.mainImage.asset.url} />}
-        {props.secondImage && <img src={props.secondImage.asset.url} />}
-        {props.thirdImage && <img src={props.thirdImage.asset.url} />}
-        <a href={props.githubLink}>Visit the Github repository</a>
-        {props.liveLink && <a href={props.liveLink}>Visit the page</a>}
-      </StyledProject>
-    </Layout>
+    <StyledProject>
+      <h1>{props.title}</h1>
+      {props.collaborators && (
+        <h3>
+          <LineBreakText text={props.collaborators} />
+        </h3>
+      )}
+      <p>{props.description}</p>
+      {props.mainImage && <img src={props.mainImage.asset.url} />}
+      {props.secondImage && <img src={props.secondImage.asset.url} />}
+      {props.thirdImage && <img src={props.thirdImage.asset.url} />}
+      <a href={props.githubLink}>Visit the Github repository</a>
+      {props.liveLink && <a href={props.liveLink}>Visit the page</a>}
+    </StyledProject>
   );
 };
 
