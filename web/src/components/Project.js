@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Layout from "../containers/layout";
+import LineBreakText from "./LineBreakText";
 
 const StyledProject = styled.div`
   width: 70vw;
@@ -48,7 +49,11 @@ const Project = props => {
     <Layout>
       <StyledProject>
         <h1>{props.title}</h1>
-        {props.collaborators && <h3>{props.collaborators}</h3>}
+        {props.collaborators && (
+          <h3>
+            <LineBreakText text={props.collaborators} />
+          </h3>
+        )}
         <p>{props.description}</p>
         {props.mainImage && <img src={props.mainImage.asset.url} />}
         {props.secondImage && <img src={props.secondImage.asset.url} />}
