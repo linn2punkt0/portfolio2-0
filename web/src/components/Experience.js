@@ -60,15 +60,6 @@ const StyledExperience = styled.div`
   & > h3 {
     margin: 2vw 0 0.5vw 0;
   }
-
-  /* .main-content {
-    height: 50vh;
-    color: var(--main-font-color);
-    font-family: var(--main-font);
-  }
-  .main-content > h3 {
-    margin-top: 100px;
-  } */
 `;
 
 const Experience = props => {
@@ -81,7 +72,7 @@ const Experience = props => {
         <h2>Utbildningar</h2>
         <div className="education">
           {education.map(e => (
-            <div>
+            <div key={e.school}>
               <h3>{e.title}</h3>
               <h4>
                 {moment(e.start).format("YYYY")}-{moment(e.end).format("YYYY")}, {e.school}
@@ -95,7 +86,7 @@ const Experience = props => {
         <h2>Tidigare erfarenheter</h2>
         <div className="work">
           {work.map(w => (
-            <div>
+            <div key={w.employer}>
               <h3>{w.title}</h3>
               <h4>
                 {moment(w.start).format("M/YY")}-

@@ -20,15 +20,15 @@ const StyledSkills = styled.div`
 `;
 
 const Skills = props => {
-  const skills = props.cv;
-  console.log(skills);
+  const skills = props.skills;
+  console.log(skills[0].skill);
   return (
     <StyledSkills>
       <ul>
         {skills.map(s => {
-          <li>
+          <li key={s.skill}>
             {s.icon}
-            <h3>{s.title}</h3>
+            <h3>{s.skill}</h3>
           </li>;
         })}
       </ul>

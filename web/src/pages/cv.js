@@ -66,16 +66,13 @@ const Styledcv = styled.div`
 const cv = props => {
   const { data, errors } = props;
   const cv = (data || {}).cv;
-  const skills = (data.skills || {}).skills ? mapEdgesToNodes(data.skills) : [];
-  const work = (data.work || {}).work ? mapEdgesToNodes(data.work) : [];
 
-  // console.log(cv.work);
   return (
     <Layout>
       <Styledcv>
         <ContactBar cv={cv} />
         <Experience cv={cv} />
-        <Skills cv={skills} />
+        <Skills skills={cv.skills} />
       </Styledcv>
     </Layout>
   );
