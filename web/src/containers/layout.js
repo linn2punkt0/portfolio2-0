@@ -12,6 +12,7 @@ const query = graphql`
       title
       description
       keywords
+      image
     }
   }
 `;
@@ -23,7 +24,12 @@ const LayoutContainer = ({ children }) => {
 
   return (
     <>
-      <SEO title={site.title} description={site.description} keywords={site.keywords} />
+      <SEO
+        title={site.title}
+        description={site.description}
+        keywords={site.keywords}
+        image={site.image}
+      />
       <GlobalStyle />
       <Burger menuIsOpen={menuIsOpen} setMenuIsOpen={setMenuIsOpen} />
       <Menu menuIsOpen={menuIsOpen} />

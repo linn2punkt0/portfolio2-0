@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 
-function SEO({ description, lang, meta, keywords, title }) {
+function SEO({ description, lang, meta, keywords, title, image }) {
   return (
     <Helmet
       htmlAttributes={{ lang }}
@@ -25,6 +25,10 @@ function SEO({ description, lang, meta, keywords, title }) {
           content: "website"
         },
         {
+          property: "og:image",
+          content: image
+        },
+        {
           name: "twitter:card",
           content: "summary"
         },
@@ -35,6 +39,10 @@ function SEO({ description, lang, meta, keywords, title }) {
         {
           name: "twitter:description",
           content: description
+        },
+        {
+          name: "twitter:image",
+          content: image
         }
       ]
         .concat(
