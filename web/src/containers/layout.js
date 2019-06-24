@@ -32,7 +32,7 @@ const LayoutContainer = ({ children }) => {
         title={site.title}
         description={site.description}
         keywords={site.keywords}
-        image={site.image}
+        image={site.image.asset.url}
       />
       <GlobalStyle />
       <Burger menuIsOpen={menuIsOpen} setMenuIsOpen={setMenuIsOpen} />

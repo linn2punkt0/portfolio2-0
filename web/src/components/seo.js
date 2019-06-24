@@ -26,7 +26,7 @@ function SEO({ description, lang, meta, keywords, title, image }) {
         },
         {
           property: "og:image",
-          content: image.url
+          content: image
         },
         {
           name: "twitter:card",
@@ -42,7 +42,7 @@ function SEO({ description, lang, meta, keywords, title, image }) {
         },
         {
           name: "twitter:image",
-          content: image.url
+          content: image
         }
       ]
         .concat(
