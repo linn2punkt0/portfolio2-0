@@ -12,7 +12,11 @@ const query = graphql`
       title
       description
       keywords
-      image
+      image {
+        asset {
+          url
+        }
+      }
     }
   }
 `;
