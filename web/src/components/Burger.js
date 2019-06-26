@@ -82,7 +82,11 @@ const StyledBurger = styled.nav`
 const Burger = props => {
   return (
     <StyledBurger menuIsOpen={props.menuIsOpen}>
-      <button type="button" onClick={() => props.setMenuIsOpen(!props.menuIsOpen)}>
+      <button
+        aria-label="menu"
+        type="button"
+        onClick={() => props.setMenuIsOpen(!props.menuIsOpen)}
+      >
         <span /> <span /> <span /> <span />
       </button>
     </StyledBurger>

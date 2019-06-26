@@ -57,8 +57,14 @@ const Project = props => {
       {props.mainImage && <img src={props.mainImage.asset.url} />}
       {props.secondImage && <img src={props.secondImage.asset.url} />}
       {props.thirdImage && <img src={props.thirdImage.asset.url} />}
-      <a href={props.githubLink}>Visit the Github repository</a>
-      {props.liveLink && <a href={props.liveLink}>Visit the page</a>}
+      <a href={props.githubLink} aria-label="Link to Github repository">
+        Visit the Github repository
+      </a>
+      {props.liveLink && (
+        <a href={props.liveLink} aria-label="Link to live site or demo site">
+          Visit the page
+        </a>
+      )}
     </StyledProject>
   );
 };
