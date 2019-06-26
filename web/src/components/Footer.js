@@ -23,9 +23,9 @@ const StyledFooter = styled.div`
   .email-me > p:first-child {
     font-size: 20px;
   }
-  .email-me > p:last-child {
+  /* .email-me > p:last-child {
     color: var(--main-accent-color);
-  }
+  } */
   .social-media {
     width: 30%;
     margin: 3vh;
