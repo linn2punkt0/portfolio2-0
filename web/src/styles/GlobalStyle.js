@@ -9,9 +9,9 @@ const GlobalStyle = createGlobalStyle`
   --main-accent-color: #a15889;
   --main-font-color: #d0d0d0;
   --main-nav-color: #000000;
-  --main-accent-font: "Great Vibes";
-  --main-font: "Comfortaa";
-  --main-detail-font: "Raleway Dots";
+  --main-accent-font: "Great Vibes", Cursive;
+  --main-font: "Comfortaa", Arial;
+  --main-detail-font: "Raleway Dots", Arial;
   --backup-font: "cursive";
   }
 
