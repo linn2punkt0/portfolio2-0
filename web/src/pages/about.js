@@ -63,7 +63,7 @@ const about = props => {
   return (
     <Layout>
       <Styledabout>
-        <div class="about-me-section">
+        <div className="about-me-section">
           <img className="profile-image" src={about.portrait.asset.url} alt="me" />
           <h2>{about.name}</h2>
           <p>
