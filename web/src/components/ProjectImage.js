@@ -11,6 +11,7 @@ const StyledProjectImage = styled.div`
   background-size: cover;
   background-position: cover;
   background-color: var(--main-font-color);
+  box-shadow: 0px 0px 4px 0px black;
   @media only screen and (max-width: 800px) {
     margin: 3vh 0 1vh 0;
   }
