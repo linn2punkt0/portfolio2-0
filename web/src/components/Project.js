@@ -31,6 +31,7 @@ const StyledProject = styled.div`
   }
   img {
     width: 70vw;
+    margin-bottom: 10px;
     @media only screen and (max-width: 800px) {
       width: 90vw;
     }
