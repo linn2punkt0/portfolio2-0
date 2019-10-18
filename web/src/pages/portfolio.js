@@ -29,17 +29,23 @@ export const query = graphql`
           liveLink
           mainImage {
             asset {
-              url
+              fluid(maxWidth: 700) {
+                ...GatsbySanityImageFluid
+              }
             }
           }
           secondImage {
             asset {
-              url
+              fluid(maxWidth: 700) {
+                ...GatsbySanityImageFluid
+              }
             }
           }
           thirdImage {
             asset {
-              url
+              fluid(maxWidth: 700) {
+                ...GatsbySanityImageFluid
+              }
             }
           }
         }

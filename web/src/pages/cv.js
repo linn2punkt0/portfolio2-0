@@ -17,7 +17,9 @@ export const query = graphql`
       name
       portrait {
         asset {
-          url
+          fluid(maxWidth: 700) {
+            ...GatsbySanityImageFluid
+          }
         }
       }
       professional

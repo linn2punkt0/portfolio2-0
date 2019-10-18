@@ -30,7 +30,9 @@ export const query = graphql`
           }
           mainImage {
             asset {
-              url
+              fluid(maxWidth: 700) {
+                ...GatsbySanityImageFluid
+              }
             }
           }
         }
@@ -111,7 +113,7 @@ const IndexPage = props => {
               <FeaturedProjects
                 key={project.id}
                 title={project.title}
-                imageUrl={project.mainImage.asset.url}
+                imageUrl={project.mainImage.asset.fluid}
                 slug={project.slug.current}
               />
             ))}

@@ -1,15 +1,16 @@
 import React from "react";
 import styled from "styled-components";
+import Img from "gatsby-image";
 
 const StyledProjectImage = styled.div`
   position: relative;
   width: 100%;
   margin: 5vh 0 2vh 0;
   padding: 0;
-  padding-top: 50%;
-  background: url(${props => props.imageUrl || "grey"});
-  background-size: cover;
-  background-position: cover;
+  /* padding-top: 50%; */
+  /* background: url(${props => props.imageUrl || "grey"}); */
+  /* background-size: cover;
+  background-position: cover; */
   background-color: var(--main-font-color);
   box-shadow: 0px 0px 4px 0px black;
   @media only screen and (max-width: 800px) {
@@ -51,6 +52,7 @@ const HoverOverlay = styled.div`
 const ProjectImage = props => {
   return (
     <StyledProjectImage imageUrl={props.imageUrl}>
+      <Img fluid={props.imageUrl} alt="project image" />
       <HoverOverlay>
         <h4>Read more</h4>
       </HoverOverlay>

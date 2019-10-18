@@ -48,7 +48,7 @@ const StyledProjectOverview = styled(Link)`
 const ProjectOverview = props => {
   return (
     <StyledProjectOverview to={`/project/${props.content.slug.current}`}>
-      <ProjectImage imageUrl={props.content.mainImage ? props.content.mainImage.asset.url : ""} />
+      <ProjectImage imageUrl={props.content.mainImage ? props.content.mainImage.asset.fluid : ""} />
       <h5>{props.content.title}</h5>
       <p className="completion-date">{moment(props.content.date).format("DD/M-YYYY")}</p>
       <p>{props.content.overview}</p>

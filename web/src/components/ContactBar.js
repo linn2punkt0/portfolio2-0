@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Img from "gatsby-image";
 
 const StyledContactBar = styled.div`
   grid-column: 1 / 2;
@@ -25,7 +26,7 @@ const StyledContactBar = styled.div`
   & > h1 {
     font-size: 30px;
   }
-  img {
+  & > div:first-of-type {
     width: 18vw;
     border-radius: 50%;
     margin: 1vh;
@@ -46,11 +47,18 @@ const StyledContactBar = styled.div`
   }
 `;
 
+const StyledImg = styled(Img)`
+  grid-row: 1 / -1;
+  border-radius: 50%;
+`;
+
 const ContactBar = props => {
   const cv = props.cv;
   return (
     <StyledContactBar>
-      <img src={cv.portrait.asset.url} />
+      <div>
+        <StyledImg fluid={cv.portrait.asset.fluid} alt="profile image" style />
+      </div>
       <h1>{cv.name}</h1>
       <h4>{cv.professional}</h4>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">

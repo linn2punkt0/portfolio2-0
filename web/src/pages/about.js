@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Layout from "../containers/layout";
 import LineBreakText from "../components/LineBreakText";
+import Img from "gatsby-image";
 
 export const query = graphql`
   query AboutQuery {
@@ -9,7 +10,9 @@ export const query = graphql`
       name
       portrait {
         asset {
-          url
+          fluid(maxWidth: 700) {
+            ...GatsbySanityImageFluid
+          }
         }
       }
       professional
@@ -33,10 +36,9 @@ const Styledabout = styled.div`
 
   .profile-image {
     width: 30vw;
-    margin: 2vw;
+    margin: 2vw auto;
     @media only screen and (max-width: 800px) {
       width: 50vw;
-      margin: 2vw;
     }
   }
   h2 {
@@ -64,7 +66,7 @@ const about = props => {
     <Layout>
       <Styledabout>
         <div className="about-me-section">
-          <img className="profile-image" src={about.portrait.asset.url} alt="me" />
+          <Img className="profile-image" fluid={about.portrait.asset.fluid} alt="me" />
           <h2>{about.name}</h2>
           <p>
             <LineBreakText text={about.professional} />
