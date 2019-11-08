@@ -64,16 +64,16 @@ const StyledBurger = styled.nav`
   }
 
   button span:nth-child(2) {
-    top: 18px;
+    top: 20px;
     transform: ${props => (props.menuIsOpen ? "rotate(45deg)" : "rotate(0deg)")};
   }
   button span:nth-child(3) {
-    top: 18px;
+    top: 20px;
     transform: ${props => (props.menuIsOpen ? "rotate(-45deg)" : "rotate(0deg)")};
   }
 
   button span:nth-child(4) {
-    top: ${props => (props.menuIsOpen ? "18px" : "36px")};
+    top: ${props => (props.menuIsOpen ? "18px" : "40px")};
     width: ${props => (props.menuIsOpen ? "0%" : "100%")};
     left: ${props => (props.menuIsOpen ? "50%" : "0")};
   }
