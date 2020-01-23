@@ -13,8 +13,8 @@ module.exports = {
     "gatsby-plugin-styled-components",
     "gatsby-plugin-postcss",
     "gatsby-plugin-react-helmet",
-    // "gatsby-transformer-sharp",
-    // "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp",
     {
       resolve: "gatsby-source-sanity",
       options: {
