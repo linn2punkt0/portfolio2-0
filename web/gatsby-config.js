@@ -13,6 +13,8 @@ module.exports = {
     "gatsby-plugin-styled-components",
     "gatsby-plugin-postcss",
     "gatsby-plugin-react-helmet",
+    // "gatsby-transformer-sharp",
+    // "gatsby-plugin-sharp",
     {
       resolve: "gatsby-source-sanity",
       options: {
@@ -20,6 +22,14 @@ module.exports = {
         token,
         watchMode: !isProd,
         overlayDrafts: !isProd && token
+      }
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-147223226-1",
+        // Defines where to place the tracking script - `true` in the head and `false` in the body
+        head: false
       }
     }
   ]
